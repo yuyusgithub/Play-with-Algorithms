@@ -1,5 +1,7 @@
 package chapter01.selection_sort03_generate_test_cases;
 
+import java.util.Arrays;
+
 public class SortTestHelper {
 
     // SortTestHelper不允许产生任何实例
@@ -27,5 +29,9 @@ public class SortTestHelper {
         System.out.println();
 
         return;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString( generateRandomArray(10,10,1)));
     }
 }
