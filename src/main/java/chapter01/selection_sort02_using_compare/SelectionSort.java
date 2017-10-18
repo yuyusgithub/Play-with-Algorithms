@@ -1,4 +1,4 @@
-package chapter01.select_sort_using_compare;
+package chapter01.selection_sort02_using_compare;
 
 public class SelectionSort {
 

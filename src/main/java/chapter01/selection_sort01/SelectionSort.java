@@ -1,4 +1,4 @@
-package chapter01.selection_sort;
+package chapter01.selection_sort01;
 
 public class SelectionSort {
 

@@ -1,4 +1,4 @@
-package chapter01.selection_sort_detect_performance;
+package chapter01.selection_sort04_detect_performance;
 
 import java.lang.reflect.Method;
 

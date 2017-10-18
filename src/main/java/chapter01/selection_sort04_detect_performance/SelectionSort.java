@@ -1,4 +1,4 @@
-package chapter01.selection_sort_generate_test_cases;
+package chapter01.selection_sort04_detect_performance;
 
 public class SelectionSort {
 
@@ -6,7 +6,7 @@ public class SelectionSort {
     private SelectionSort() {
     }
 
-    public static <T extends Comparable<T>> void sort(T[] arr) {
+    public static void sort(Comparable[] arr) {
 
         int n = arr.length;
         for (int i = 0; i < n; i++) {
@@ -32,8 +32,7 @@ public class SelectionSort {
         // 测试排序算法辅助函数
         int N = 20000;
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
-        SelectionSort.sort(arr);
-        SortTestHelper.printArray(arr);
+        SortTestHelper.testSort("bobo.algo.SelectionSort", arr);
 
         return;
     }

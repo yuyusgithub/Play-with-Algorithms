@@ -1,4 +1,4 @@
-package chapter01.selection_sort_generate_test_cases;
+package chapter01.selection_sort03_generate_test_cases;
 
 public class SortTestHelper {
 
