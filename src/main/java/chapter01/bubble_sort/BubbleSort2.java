@@ -1,7 +1,5 @@
 package chapter01.bubble_sort;
 
-import java.util.Arrays;
-
 public class BubbleSort2 {
 
     // 我们的算法类不允许产生任何实例

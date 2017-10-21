@@ -1,7 +1,5 @@
 package chapter01.insert_sort01;
 
-import java.util.*;
-
 public class InsertionSort{
 
     // 我们的算法类不允许产生任何实例
