@@ -40,6 +40,10 @@ public class QuickSort {
 
         int n = arr.length;
         sort(arr, 0, n-1);
+        for(int i = 0 ;i<arr.length;i++){
+            System.out.printf(arr[i].toString());
+        }
+
     }
 
     private static void swap(Object[] arr, int i, int j) {
@@ -53,9 +57,9 @@ public class QuickSort {
 
         // Quick Sort也是一个O(nlogn)复杂度的算法
         // 可以在1秒之内轻松处理100万数量级的数据
-        int N = 1000000;
-        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
-        SortTestHelper.testSort("bobo.algo.QuickSort", arr);
+        int N = 10;
+        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 10);
+        SortTestHelper.testSort("chapter02.quick_sort04.QuickSort", arr);
 
         return;
     }
