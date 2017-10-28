@@ -11,40 +11,30 @@ public class insertSort {
             for (int j = i; j > 0; j--) {
                 if (array[j].compareTo(array[j - 1]) < 0) {
                     Utils.swap(array, j, j - 1);
-                }else{
+                } else {
                     break;
                 }
             }
         }
     }
 
-    private static void sort1(Comparable[] array) {
+
+    private static void sortAdvance(Comparable[] array) {
         int size = array.length;
         for (int i = 0; i < size; i++) {
-            for (int j = i; j > 0 && array[j].compareTo(array[j - 1]) < 0; j--) {
-                    Utils.swap(array, j, j - 1);
-            }
-        }
-    }
-
-    private static void sortAdvance1(Comparable[] array) {
-        int size = array.length;
-
-        for (int i = 0; i < size; i++) {
-            Comparable tmp = array[i];
+            Comparable o = array[i];
             int j = i;
-            for ( ; j > 0 && array[j-1].compareTo(tmp) > 0; j--) {
-                array[j] = array[j-1];
+            for (; j > 0 && array[j - 1].compareTo(o) > 0; j--) {
+                array[j] = array[j - 1];
             }
-            array[j] = tmp;
+            array[j] = o;
         }
     }
+
 
     public static void main(String[] args) {
-        Comparable[] datas = Utils.random(10,1,100);
-//        sort(datas);
-//        sort1(datas);
-        sortAdvance1(datas);
+        Comparable[] datas = Utils.random(10, 1, 100);
+        sortAdvance(datas);
         Utils.printt(datas);
     }
 }

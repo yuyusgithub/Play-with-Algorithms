@@ -1,7 +1,5 @@
 package chapter07.o_03_Lazy_Prim;
 
-import sun.jvm.hotspot.asm.Arithmetic;
-
 import java.util.Vector;
 
 // 使用Prim算法求图的最小生成树
