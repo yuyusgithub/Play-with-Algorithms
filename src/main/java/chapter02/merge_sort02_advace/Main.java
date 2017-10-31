@@ -8,7 +8,7 @@ public class Main {
     // 整体而言, MergeSort的性能最优, 对于近乎有序的数组的特殊情况, 见测试2的详细注释
     public static void main(String[] args) {
 
-        int N = 50000;
+        int N = 100000;
 
         // 测试1 一般测试
         System.out.println("Test for random array, size = " + N + " , random range [0, " + N + "]");
@@ -17,9 +17,9 @@ public class Main {
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
 
-        SortTestHelper.testSort("bobo.algo.InsertionSort", arr1);
-        SortTestHelper.testSort("bobo.algo.MergeSort", arr2);
-        SortTestHelper.testSort("bobo.algo.MergeSort2", arr3);
+        SortTestHelper.testSort("chapter02.merge_sort02_advace.InsertionSort", arr1);
+        SortTestHelper.testSort("chapter02.merge_sort02_advace.MergeSort", arr2);
+        SortTestHelper.testSort("chapter02.merge_sort02_advace.MergeSort2", arr3);
 
         System.out.println();
 
@@ -34,9 +34,9 @@ public class Main {
         arr2 = Arrays.copyOf(arr1, arr1.length);
         arr3 = Arrays.copyOf(arr1, arr1.length);
 
-        SortTestHelper.testSort("bobo.algo.InsertionSort", arr1);
-        SortTestHelper.testSort("bobo.algo.MergeSort", arr2);
-        SortTestHelper.testSort("bobo.algo.MergeSort2", arr3);
+        SortTestHelper.testSort("chapter02.merge_sort02_advace.InsertionSort", arr1);
+        SortTestHelper.testSort("chapter02.merge_sort02_advace.MergeSort", arr2);
+        SortTestHelper.testSort("chapter02.merge_sort02_advace.MergeSort2", arr3);
 
         return;
     }

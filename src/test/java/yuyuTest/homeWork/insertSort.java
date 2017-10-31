@@ -18,6 +18,22 @@ public class insertSort {
         }
     }
 
+    private static void sort2(Comparable[] array) {
+        int size = array.length;
+        for (int i = 0; i < size; i++) {
+            Comparable t = array[i];
+            int j = i;
+            for(;j>0;j--){
+                if(array[j-1].compareTo(t) > 0){
+                    array[j] = array[j-1];
+                }else{
+                    break;
+                }
+            }
+            array[j] = t;
+        }
+    }
+
 
     private static void sortAdvance(Comparable[] array) {
         int size = array.length;
@@ -34,7 +50,7 @@ public class insertSort {
 
     public static void main(String[] args) {
         Comparable[] datas = Utils.random(10, 1, 100);
-        sortAdvance(datas);
+        sort2(datas);
         Utils.printt(datas);
     }
 }

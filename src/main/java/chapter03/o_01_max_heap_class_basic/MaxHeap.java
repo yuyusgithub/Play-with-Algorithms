@@ -1,13 +1,13 @@
 package chapter03.o_01_max_heap_class_basic;
 
-public class MaxHeap<RRR> {
+public class MaxHeap<Item> {
 
-    private RRR[] data;
+    private Item[] data;
     private int count;
 
     // 构造函数, 构造一个空堆, 可容纳capacity个元素
     public MaxHeap(int capacity) {
-        data = (RRR[]) new Object[capacity + 1];
+        data = (Item[]) new Object[capacity + 1];
         count = 0;
     }
 
@@ -23,8 +23,9 @@ public class MaxHeap<RRR> {
 
     // 测试 MaxHeap
     public static void main(String[] args) {
-
         MaxHeap<Integer> maxHeap = new MaxHeap<Integer>(100);
         System.out.println(maxHeap.size());
     }
+
+
 }

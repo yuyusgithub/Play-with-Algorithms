@@ -15,8 +15,8 @@ public class BubbleSort {
                     Utils.swap(array,i,i-1);
                     flag = true;
                 }
+                size--;
             }
-            size--;
         }while (flag);
     }
 
