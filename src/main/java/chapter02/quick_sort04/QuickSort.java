@@ -1,7 +1,5 @@
 package chapter02.quick_sort04;
 
-import java.util.*;
-
 public class QuickSort {
 
     // 我们的算法类不允许产生任何实例
@@ -30,7 +28,6 @@ public class QuickSort {
 
         if( l >= r )
             return;
-
         int p = partition(arr, l, r);
         sort(arr, l, p-1 );
         sort(arr, p+1, r);
