@@ -12,8 +12,7 @@ public class MergeSort {
 
     // 将arr[l...mid]和arr[mid+1...r]两部分进行归并
     private static void merge(Comparable[] arr, int l, int mid, int r) {
-
-        Comparable[] aux = Arrays.copyOfRange(arr, l, r);
+        Comparable[] aux = Arrays.copyOfRange(arr, l, r + 1);
         // 初始化，i指向左半部分的起始索引位置l；j指向右半部分起始索引位置mid+1
         int i = l, j = mid + 1;
         for (int k = l; k <= r; k++) {
@@ -31,6 +30,13 @@ public class MergeSort {
                 j++;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Comparable[] arr = new Comparable[]{1, 2, 36, 65, 5, 8, 68, 55};
+        Comparable[] aux = Arrays.copyOfRange(arr, 0, 7);
+        Utils.printt(aux);
+
     }
 
     // 递归使用归并排序,对arr[l...r]的范围进行排序
@@ -52,18 +58,18 @@ public class MergeSort {
     }
 
     // 测试MergeSort
-    public static void main(String[] args) {
-
-        // Merge Sort是我们学习的第一个O(nlogn)复杂度的算法
-        // 可以在1秒之内轻松处理100万数量级的数据
-        // 注意：不要轻易尝试使用SelectionSort, InsertionSort或者BubbleSort处理100万级的数据
-        // 否则，你就见识了O(n^2)的算法和O(nlogn)算法的本质差异：）
-        int N = 10;
-        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 10);
-        sort(arr);
-        Utils.printt(arr);
-//        SortTestHelper.testSort("bobo.algo.MergeSort", arr);
-
-        return;
-    }
+//    public static void main(String[] args) {
+//
+//        // Merge Sort是我们学习的第一个O(nlogn)复杂度的算法
+//        // 可以在1秒之内轻松处理100万数量级的数据
+//        // 注意：不要轻易尝试使用SelectionSort, InsertionSort或者BubbleSort处理100万级的数据
+//        // 否则，你就见识了O(n^2)的算法和O(nlogn)算法的本质差异：）
+//        int N = 10;
+//        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 10);
+//        sort(arr);
+//        Utils.printt(arr);
+////        SortTestHelper.testSort("bobo.algo.MergeSort", arr);
+//
+//        return;
+//    }
 }
