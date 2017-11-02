@@ -23,17 +23,16 @@ public class insertSort {
         for (int i = 0; i < size; i++) {
             Comparable t = array[i];
             int j = i;
-            for(;j>0;j--){
-                if(array[j-1].compareTo(t) > 0){
-                    array[j] = array[j-1];
-                }else{
+            for (; j > 0; j--) {
+                if (array[j - 1].compareTo(t) > 0) {
+                    array[j] = array[j - 1];
+                } else {
                     break;
                 }
             }
             array[j] = t;
         }
     }
-
 
     private static void sortAdvance(Comparable[] array) {
         int size = array.length;

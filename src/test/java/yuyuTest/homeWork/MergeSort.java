@@ -27,10 +27,10 @@ public class MergeSort {
         int leftIndex = left;
         int rightIndex = mid + 1;
         for (int i = left; i <= right; i++) {
-            if (leftIndex > mid) { //说明左边的已经排完了
+            if (leftIndex > mid) {
                 array[i] = tmp[rightIndex - left];
                 rightIndex++;
-            } else if (rightIndex > right) { //it means the right side has been sorted;
+            } else if (rightIndex > right) {
                 array[i] = tmp[leftIndex - left];
                 leftIndex++;
             } else if (tmp[leftIndex-left].compareTo(tmp[rightIndex-left]) < 0) {
