@@ -1,7 +1,5 @@
 package chapter03.o_05_heap_sort;
 
-import java.util.*;
-
 public class HeapSort2 {
 
     // 我们的算法类不允许产生任何实例

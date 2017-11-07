@@ -10,17 +10,14 @@ public class QuickSort {
     private static int partition(Comparable[] arr, int l, int r){
 
         Comparable v = arr[l];
-
-        int j = l; // arr[l+1...j] < v ; arr[j+1...i) > v
+        int index = l; // arr[l+1...j] < v ; arr[j+1...i) > v
         for( int i = l + 1 ; i <= r ; i ++ )
             if( arr[i].compareTo(v) < 0 ){
-                j ++;
-                swap(arr, j, i);
+                index ++;
+                swap(arr, index, i);
             }
-
-        swap(arr, l, j);
-
-        return j;
+        swap(arr, l, index);
+        return index;
     }
 
     // 递归使用快速排序,对arr[l...r]的范围进行排序

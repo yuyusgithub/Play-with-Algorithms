@@ -1,6 +1,5 @@
 package chapter02.quick_sort05_deal_with_nearly_ordered_array;
 
-import java.util.*;
 
 public class QuickSort {
 

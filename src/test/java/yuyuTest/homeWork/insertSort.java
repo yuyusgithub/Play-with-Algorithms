@@ -3,9 +3,9 @@ package yuyuTest.homeWork;
 /**
  * Created by 彦祖 .
  */
-public class insertSort {
+public class InsertSort {
 
-    private static void sort(Comparable[] array) {
+    public static void sort(Comparable[] array) {
         int size = array.length;
         for (int i = 0; i < size; i++) {
             for (int j = i; j > 0; j--) {
