@@ -1,0 +1,19 @@
+5.5.8之后，mysql默认Innodb引擎
+适合大量的小事务
+提供了表空间这个概念
+通过innodb_file_per_table来进行修改
+如果ON：独立表空间tablename:ibd -->frm文件 ibd文件，实际数据
+如果OFF:系统表空间ibdataX --> frm文件  ibdata1，实际数据
+系统表空间->独立表空间（略）
+
+事务性存储引擎
+redo log 已提交事务 undo log 未提交事务
+
+innodb 支持行级锁  ，行级所可以最大程度的支持并发，是有存储引擎实现的
+表级锁  lock table xxxx；unlock table xxxx；表级锁锁定之后，其他操作会堵塞等待；
+阻塞和死锁
+一个事务在等待另一个事务的锁释放，叫做阻塞；
+死锁就是两个事务相互等待对方的锁，永远得不到解放；
+
+状态检查
+show engine innodb status；不同版本，输出的信息不一定相同；
