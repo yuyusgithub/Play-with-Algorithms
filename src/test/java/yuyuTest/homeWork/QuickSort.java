@@ -46,7 +46,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        Comparable[] array = Utils.random(100, 0, 100);
+        Comparable[] array = Utils.random(20, 0, 100);
         sort(array);
         Utils.printt(array);
     }
