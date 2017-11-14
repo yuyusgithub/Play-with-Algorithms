@@ -18,38 +18,21 @@ public class InsertSort {
         }
     }
 
-    private static void sort2(Comparable[] array) {
-        int size = array.length;
-        for (int i = 0; i < size; i++) {
-            Comparable t = array[i];
-            int j = i;
-            for (; j > 0; j--) {
-                if (array[j - 1].compareTo(t) > 0) {
-                    array[j] = array[j - 1];
-                } else {
-                    break;
-                }
-            }
-            array[j] = t;
-        }
-    }
-
     private static void sortAdvance(Comparable[] array) {
         int size = array.length;
         for (int i = 0; i < size; i++) {
             Comparable o = array[i];
             int j = i;
-            for (; j > 0 && array[j - 1].compareTo(o) > 0; j--) {
+            for (; j > 0 && array[j].compareTo(j - 1) > 0; j--) {
                 array[j] = array[j - 1];
             }
             array[j] = o;
         }
     }
 
-
     public static void main(String[] args) {
         Comparable[] datas = Utils.random(10, 1, 100);
-        sort2(datas);
+        sort(datas);
         Utils.printt(datas);
     }
 }
